@@ -2,7 +2,8 @@
 
 A self-hosted robot control dashboard, rebuilt from the ERIC Robotics **Insight.IO** design (FSD Assignment #1).
 
-**Author:** Roshan
+**Author:** Roshan  
+**Email:** roshannarawade12@gmail.com
 
 | 2D map | 3D point cloud |
 |---|---|
