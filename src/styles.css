@@ -185,13 +185,14 @@ button:disabled { cursor: not-allowed; }
 .dpad .n, .dpad .s { gap: 1.2rem; } .dpad .w, .dpad .e { gap: 1.2rem; }
 .dpad .hub { position: absolute; left: 50%; top: 50%; width: 6.6rem; height: 6.6rem; transform: translate(-50%, -50%); border-radius: 50%; background: #eef1f7; color: #5a6580; display: grid; place-items: center; font-size: 1.1rem; text-align: center; line-height: 1.2; box-shadow: inset 0 0 0 0.2rem rgba(14, 26, 51, 0.08); }
 
-.banner { position: absolute; z-index: 6; top: 12rem; left: 50%; transform: translateX(-50%); background: var(--bad); color: #fff; font-weight: 700; padding: 1rem 2.6rem; border-radius: 999px; box-shadow: var(--shadow); font-size: 1.8rem; }
+.notices { position: absolute; z-index: 7; top: 14rem; left: calc(50% + 3.5rem); transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.8rem; pointer-events: none; max-width: 90%; }
+.banner { background: var(--bad); color: #fff; font-weight: 700; padding: 1rem 2.6rem; border-radius: 999px; box-shadow: var(--shadow); font-size: 1.8rem; white-space: nowrap; }
 
 /* Small screens: stack the HUD so it stays usable */
 @media (max-width: 900px) {
   html { font-size: 5.6px; }
   .hud.tc { top: 17rem; }
-  .banner { top: 30rem; }
+  .notices { top: 33rem; }
 }
 @media (max-width: 640px) {
   html { font-size: 5px; }
@@ -233,12 +234,12 @@ button:disabled { cursor: not-allowed; }
 .spark { width: 100%; height: 5rem; display: block; }
 
 /* Toasts */
-.toasts { position: absolute; z-index: 7; top: 12.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.8rem; pointer-events: none; }
+.toasts { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; pointer-events: none; }
 .toast { background: rgba(14, 26, 51, 0.92); color: #fff; font-size: 1.6rem; font-weight: 500; padding: 0.9rem 2rem; border-radius: 999px; box-shadow: var(--shadow); animation: tab-in 0.25s ease; }
 .toast.ok { background: rgba(21, 128, 61, 0.95); }
 .toast.bad { background: rgba(190, 30, 45, 0.95); }
 
-@media (max-width: 900px) { .hud.bc { display: none; } .toasts { top: 28rem; } }
+@media (max-width: 900px) { .hud.bc { display: none; } }
 
 /* 2D / 3D map toggle */
 .tabrow { display: flex; align-items: center; gap: 1.2rem; margin-top: 1.1rem; }

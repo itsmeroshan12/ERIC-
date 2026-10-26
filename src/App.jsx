@@ -69,7 +69,7 @@ export default function App() {
     setPaused(!paused);
   }, [paused, push]);
   const toggleEstop = useCallback(() => {
-    push(estop ? 'Emergency stop released' : 'Emergency stop engaged', estop ? 'info' : 'bad');
+    if (estop) push('Emergency stop released'); // engaging is already shown by the banner
     setEstop(!estop);
   }, [estop, push]);
   const changeMode = useCallback((m) => {
@@ -194,8 +194,10 @@ export default function App() {
           <DPad disabled={mode !== 'MANUAL' || estop} pressed={pressed} onPress={press} onRelease={release} />
         </div>
 
-        <Toasts toasts={toasts} />
-        {estop && <div className="banner" role="alert">Emergency stop engaged</div>}
+        <div className="notices">
+          {estop && <div className="banner" role="alert">Emergency stop engaged</div>}
+          <Toasts toasts={toasts} />
+        </div>
       </main>
     </div>
   );
