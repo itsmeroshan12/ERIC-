@@ -1,6 +1,6 @@
 # Insight.IO Dashboard
 
-A self-hosted robot control dashboard, rebuilt from the ERIC Robotics **Insight.IO** design (FSD Assignment #1).
+A self-hosted robot control dashboard, rebuilt from the ERIC Robotics **Insight.IO** design ().
 
 **Author:** Roshan  
 **Email:** roshannarawade12@gmail.com
